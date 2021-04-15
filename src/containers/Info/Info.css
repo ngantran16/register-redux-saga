@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.register-page {
+    display: flex;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2018/10/taking-beautiful-photos-of-nature-2.jpg?resize=1500%2C1000&ssl=1');
+    background-size: cover;
+}
+
+.register-session {
+    width: 350px;
+    background-color: rgb(247, 243, 244);
+    border: 1px solid rgb(219, 219, 219);
+    padding: 10px 40px;
+}
+
+.help-block {
+    color: #ff4500;
+    font-size: 12px;
+}
+
+.phone-input {
+    background-color: white;
+    height: 45px;
+}
+
+.form-control {
+    height: 30px;
+    width: 340px;
+    padding: 9px 0 7px 8px;
+    border: none;
+    color: #262626;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.text-gender {
+    margin-top: 30px;
+    color: gray;
+}
+
+.img-female {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0px 10px 0px 0px;
+    background-color: #DDDDDD;
+}
+
+.text-upload {
+    width: 160px;
+}
+
+.text-upload p {
+    font-size: 18px;
+    color: gray;
+}
+
+.upload-session {
+    display: flex;
+    flex-direction: row;
+}
+
+.radius-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    border: 1px solid gray;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: flex-end;
+}

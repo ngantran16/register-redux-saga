@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.register-page {
+    display: flex;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2018/10/taking-beautiful-photos-of-nature-2.jpg?resize=1500%2C1000&ssl=1');
+    background-size: cover;
+}
+
+.register-session {
+    width: 350px;
+    background-color: rgb(247, 243, 244);
+    border: 1px solid rgb(219, 219, 219);
+    padding: 10px 40px;
+}
+
+.form-control {
+    height: 30px;
+    width: 285px;
+    padding: 9px 0 7px 8px;
+    border: none;
+    color: #262626;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.help-block {
+    color: #ff4500;
+    font-size: 12px;
+}
+
+.has-error .form-control {
+    outline: none;
+    box-shadow: none !important;
+    transition: none;
+    border-color: #ff4500 !important;
+}
+
+.checkbox-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+ 
+.label-input {
+    padding: 12px;
+}
+
+.phone-input {
+    background-color: white;
+    height: 45px;
+}
+
+.otp-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-item {
+    width: 50px;
+    height:35px;
+    margin: 10px;
+}
+
+.radius-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    border: 1px solid gray;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirm-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.register-session2 {
+    width: 350px;
+    background-color: rgb(247, 243, 244);
+    border: 1px solid rgb(219, 219, 219);
+    padding: 10px 40px;
+    margin-top:100px;
+    margin-left: 100px;
+}
+
+.request-link {
+    text-decoration: none;
+}
