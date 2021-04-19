@@ -15,24 +15,20 @@ import {
 const RegisterForm = () => {
     const dispatch = useDispatch();
     const formik = useFormik({
-        initialValues: {
-          phone: '',
-        },
-        validate: (values) => {
-          return validateValuesByRule({
-            phone: validationRules.phoneNumber
-          })(values);
-        },
-        onSubmit: (values, actions) => {
-          console.log(values);
-          dispatch(RegisterTypes.userRegister(values));
-          //console.log("hi");
-          // setTimeout(() => {
-          //   actions.setSubmitting(false);
-          //   alert(JSON.stringify(values, null, 2));
-          // }, 400);
-        }
-      });
+      initialValues: {
+        phone: '',
+        checkTerm: false,
+      },
+      validate: (values) => {
+        return validateValuesByRule({
+          phone: validationRules.phoneNumber,
+          checkTerm: validationRules.checkbox
+        })(values);
+      },
+      onSubmit: (values, actions) => {
+        dispatch(RegisterTypes.userRegister(values));
+      }
+    });
 
     return (
         <form
@@ -59,12 +55,30 @@ const RegisterForm = () => {
                 </div>
             </div>
             <div>
-            <p>
+            <div className={classNames({
+              'form-group': true,
+              'has-error': formik.touched.checkTerm && formik.errors.checkTerm
+              })}>
+              <p>
                 <label className="checkbox-inline">
-                    <input type="checkbox" />&nbsp;
+                    <input 
+                      type="checkbox"
+                      id="checkTerm"
+                      name="checkTerm"
+                      defaultChecked={false}
+                      onBlur={formik.handleBlur}
+                      onChange={formik.handleChange}
+                    />
+                    &nbsp;
                     Agree Terms and Conditions
                 </label>
-            </p>
+                {formik.touched.checkTerm && formik.errors.checkTerm && (
+                    <span className="help-block">
+                    {formik.errors.checkTerm}
+                    </span>
+                    )}
+              </p>
+            </div>
             </div>
 
             <div className="submit-button">
