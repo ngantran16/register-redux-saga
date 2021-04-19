@@ -4,9 +4,7 @@ import RegisterActions, { RegisterTypes } from './actions';
 import { otpPhoneNumber } from '../../api/otp';
 
 export function* registerSaga({ data }) {
-  console.log('Hellos');
   try {
-    console.log("f");
     const response = yield call(otpPhoneNumber, data);
     console.log(response);
     const newResponse = {
